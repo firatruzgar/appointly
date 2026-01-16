@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# appointly
 
-## Getting Started
+### Smart Appointment Management System (API Integrated)
 
-First, run the development server:
+Schedura is a role-based, real-world appointment management system designed for service-based businesses such as salons, clinics, consultants, and studios.  
+The system focuses on **time-slot management, conflict prevention, and real-life business rules**, rather than simple CRUD operations.
+
+This project was built as a **CV-focused, production-like application** to demonstrate frontend, backend, database, authentication, and external API integrations using modern web technologies.
+
+---
+
+## 🚀 Features
+
+### Core Appointment Management
+
+- Create, update, and cancel appointments
+- Time-slot based scheduling with **conflict prevention**
+- Service-based duration handling (e.g. 30 min, 60 min services)
+- Appointment status workflow:
+
+### Role-Based Access
+
+- **USER**: Create and manage own appointments
+- **ADMIN**: Manage services, working hours, approvals, and reports
+- Protected routes and server-side authorization
+
+### Business Rules (Real-World Focus)
+
+- Working hours enforcement (appointments outside working hours are blocked)
+- Daily capacity limits
+- Automatic detection of overlapping appointments
+- Delay handling and risk indicators for upcoming appointments
+
+### External API Integrations
+
+- **Google Calendar API**
+- Approved appointments are automatically added to the business calendar
+- **Email API (Resend / SendGrid)**
+- Appointment approval notifications
+- Cancellation notifications
+
+### Admin Dashboard & Reporting
+
+- Daily appointment count
+- Cancellation rate
+- Peak time slots
+- Simple analytics for operational insight
+
+---
+
+## 🧠 Why This Project?
+
+Most junior-level projects focus only on basic CRUD operations.  
+Schedura goes beyond that by implementing:
+
+- Time-based conflict algorithms
+- Real business constraints
+- Role-based workflows
+- Third-party API integrations
+- Scalable and extensible architecture
+
+This makes the project closer to **real production systems** rather than tutorial-style demos.
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend
+
+- Next.js API Routes
+- Server Actions
+- Zod (validation)
+
+### Database
+
+- PostgreSQL
+- Prisma ORM
+
+### Authentication
+
+- NextAuth (Credentials / Google OAuth)
+
+### External Services
+
+- Google Calendar API
+- Email API (Resend or SendGrid)
+
+### Tooling
+
+- GitHub
+- Trello (task & roadmap management)
+- Vercel (deployment)
+
+---
+
+## 🗂 Database Models (Simplified)
+
+- User
+- Service
+- Appointment
+- WorkingHours
+
+Relationships are designed using relational database principles with Prisma.
+
+---
+
+## 🔐 Authentication & Authorization
+
+- Session-based authentication via NextAuth
+- Role-based access control (RBAC)
+- Server-side route protection
+- Secure handling of OAuth tokens
+
+---
+
+## 📦 Installation & Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/schedura.git
+cd schedura
+npm install
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
