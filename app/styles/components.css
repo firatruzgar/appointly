@@ -1,0 +1,87 @@
+/* ================= BUTTON BASE ================= */
+button {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+
+  padding: var(--space-2) var(--space-4);
+
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid transparent;
+
+  cursor: pointer;
+  transition: var(--transition-fast);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* ================= PRIMARY BUTTON ================= */
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.button-primary:active {
+  background-color: var(--color-primary-active);
+  box-shadow: var(--shadow-md);
+}
+
+/* ================= OUTLINE BUTTON ================= */
+.button-outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.button-outline:hover {
+  background-color: var(--color-surface-hover);
+}
+
+/* ================= GHOST BUTTON ================= */
+.button-ghost {
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+.button-ghost:hover {
+  background-color: var(--color-surface);
+}
+
+/* ================= DANGER BUTTON ================= */
+.button-danger {
+  background-color: var(--color-danger);
+  color: var(--color-text-inverse);
+}
+
+.button-danger:hover {
+  filter: brightness(0.95);
+}
+
+/* ================= DISABLED STATE ================= */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================= SIZE VARIANTS ================= */
+.button-sm {
+  font-size: var(--font-size-sm);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.button-lg {
+  font-size: var(--font-size-md);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+}
