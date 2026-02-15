@@ -85,3 +85,53 @@ button:disabled {
   padding: var(--space-3) var(--space-6);
   border-radius: var(--radius-lg);
 }
+
+/* ================= INPUT ================= */
+
+/* Wrapper */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Label */
+.input-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Base input */
+.input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+/* Sizes */
+.input-sm {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.input-lg {
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+/* Error */
+.input-error {
+  border-color: #dc2626;
+}
+
+.input-error-message {
+  color: #dc2626;
+  font-size: 12px;
+}
