@@ -3,7 +3,7 @@ import React from "react";
 type InputProps = {
   label?: string;
   error?: string;
-  inputSize?: "sm" | "md" | "lg|";
+  inputSize?: "sm" | "md" | "lg";
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 export default function Input({
@@ -12,6 +12,7 @@ export default function Input({
   inputSize = "md",
   className = "",
   id,
+  name,
   ...props
 }: InputProps) {
   const baseClass = "input";
@@ -22,10 +23,16 @@ export default function Input({
     .filter(Boolean)
     .join(" ");
 
+  const inputId = id || name;
+
   return (
     <div className="input-wrapper">
-      {label && <label className="input-label">{label}</label>}
-      <input id={id} className={classes} {...props} />
+      {label && (
+        <label htmlFor={inputId} className="input-label">
+          {label}
+        </label>
+      )}
+      <input id={inputId} className={classes} name={name} {...props} />
       {error && <span>{error}</span>}
     </div>
   );
