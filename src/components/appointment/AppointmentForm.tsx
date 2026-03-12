@@ -39,65 +39,67 @@ const AppointmentForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Book an Appointment</h1>
+    <form className="form-container" onSubmit={handleSubmit}>
+      <h1 className="form-title">Book an Appointment</h1>
 
-      <Input
-        name="name"
-        label="Name"
-        type="text"
-        placeholder="Enter Your Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
+      <div className="form fields">
+        <Input
+          name="name"
+          label="Name"
+          type="text"
+          placeholder="Enter Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
 
-      <Input
-        name="surname"
-        label="Surname"
-        type="text"
-        placeholder="Enter Your Surname"
-        value={formData.surname}
-        onChange={handleChange}
-        required
-      />
-      <Input
-        name="phone"
-        label="Phone"
-        type="tel"
-        placeholder="Enter Your Phone Number"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-      />
+        <Input
+          name="surname"
+          label="Surname"
+          type="text"
+          placeholder="Enter Your Surname"
+          value={formData.surname}
+          onChange={handleChange}
+          required
+        />
+        <Input
+          name="phone"
+          label="Phone"
+          type="tel"
+          placeholder="Enter Your Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
 
-      <Input
-        name="email"
-        label="Email"
-        type="email"
-        placeholder="Enter Your Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
+        <Input
+          name="email"
+          label="Email"
+          type="email"
+          placeholder="Enter Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
-      <Input
-        name="date"
-        label="Date"
-        type="date"
-        value={formData.date}
-        onChange={handleChange}
-        required
-      />
+        <Input
+          name="date"
+          label="Date"
+          type="date"
+          value={formData.date}
+          onChange={handleChange}
+          required
+        />
 
-      <Input
-        name="time"
-        label="Time"
-        type="time"
-        value={formData.time}
-        onChange={handleChange}
-        required
-      />
+        <Input
+          name="time"
+          label="Time"
+          type="time"
+          value={formData.time}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
       <Button type="submit">Save</Button>
     </form>
